@@ -186,6 +186,13 @@ export class GuiModel {
                             "color": "wisteria",
                             "page": "groupspage",
                         },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-gamepad",
+                            "color": "green",
+                            "page": "activityspage"
+                        },
                     ]
                 },
                 {
@@ -203,26 +210,40 @@ export class GuiModel {
                                 "form": "FriendForm"
                             }
                         },
-                        /** 
-                         * Wo kommt dieser Teil hin ??
-                        {
-                            "type": "newButton",
-                            "name": "NewActivity",
-                            "icon": "fa-user",
-                            "color": "green",
-                            "form": {
-                                "form": "AddActivityForm"
-                            }
-                        },
-                        */
                         {
                             "type": "list",
                             "icon": "fa-user",
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
+                            "page": "frienddetailspage",
+                        },
+                    ]
+                },
+                {
+                    "id": "frienddetailspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "EditFriend",
+                            "icon": "fa-user",
+                            "color": "green",
+                            "url": "/friend/:friendKey",
                             "form": {
                                 "form": "FriendForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/friend/:friendKey/activity",
+                            "form": {
+                                "form": "AddActivityForm"
                             }
                         },
                     ]
@@ -278,6 +299,33 @@ export class GuiModel {
                             "url": "/group",
                             "form": {
                                 "form": "GroupForm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "activityspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-gamepod",
+                            "color": "green",
+                            "form": {
+                                "form": "AddActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-gamepod",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/activity",
+                            "form": {
+                                "form": "AddActivityForm"
                             }
                         }
                     ]
