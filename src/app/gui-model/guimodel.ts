@@ -458,7 +458,7 @@ export class GuiModel {
                             "icon": "fa-weixin",
                             "color": "orange",
                             "search": true,
-                            "url": "/activity",
+                            "url": "/friend/:friendKey/activity",
                             "form": {
                                 "form": "AddActivityForm"
                             }
@@ -494,7 +494,7 @@ export class GuiModel {
                             "icon": "fa-user",
                             "color": "blue",
                             "search": true,
-                            "url": "/friend",
+                            "url": "/activity/:activityKey/friend",
                             "form": {
                                 "form": "FriendForm"
                             }
@@ -530,7 +530,7 @@ export class GuiModel {
                             "icon": "fa-home",
                             "color": "orange",
                             "search": true,
-                            "url": "/activity",
+                            "url": "/location/:locationKey/activity",
                             "form": {
                                 "form": "ActivityForm"
                             }
